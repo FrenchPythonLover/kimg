@@ -5,7 +5,7 @@ all: bin/kimg bin/kimg.1
 
 bin/kimg:main.o
 	mkdir -p bin/
-	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@
+	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
 
 bin/kimg.1:kimg.1.scdoc
 	scdoc < kimg.1.scdoc > bin/kimg.1
